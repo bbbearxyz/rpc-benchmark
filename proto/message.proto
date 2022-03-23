@@ -1,0 +1,28 @@
+syntax = "proto3";
+option go_package = ".;proto";
+
+service MessageSender {
+  rpc Send(MessageRequest) returns (MessageResponse) {}
+  rpc StreamTest(stream MessageRequest) returns (stream MessageResponse) {}
+}
+
+message MessageResponse {
+  string responseSomething = 1;
+
+}
+
+message MessageRequest {
+  string field1 = 1;
+  string field2 = 2;
+  string field3 = 3;
+  string field4 = 4;
+  string field5 = 5;
+  string field6 = 6;
+  string field7 = 7;
+  string field8 = 8;
+  string field9 = 9;
+  string field10 = 10;
+  int64 time = 11;
+}
+
+
