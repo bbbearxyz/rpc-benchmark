@@ -8,7 +8,7 @@ service MessageSender {
 
 message MessageResponse {
   string responseSomething = 1;
-
+  bool isEnd = 2;
 }
 
 message MessageRequest {
