@@ -4,10 +4,14 @@ import (
 	"context"
 	"fmt"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/keepalive"
 	"log"
 	"math/rand"
 	"net"
+	"os"
 	"rpc_test/src/grpc/proto"
+	"runtime"
+	"strconv"
 	"time"
 )
 
@@ -29,6 +33,18 @@ func GetRandomString(l int) string {
 }
 
 func main() {
+
+	var args = os.Args
+	// 参数介绍
+	// 只有一个参数 num stream worker
+	// 如果为0 表示 没有worker 每一次stream都有一个go routine
+	// 如果为1 表示 stream worker的数量为逻辑cpu数量
+	useStreamWorker, _ := strconv.ParseInt(args[1], 10, 64)
+	if useStreamWorker == 1 {
+		println("use stream worker")
+	} else {
+		println("don't use stream worker")
+	}
 	// 支持流式
 	// 生成流式数据
 	// 生成10mb 反复用
@@ -37,7 +53,23 @@ func main() {
 	if err != nil {
 		log.Fatalf("tcp listen failed:%v", err)
 	}
-	server := grpc.NewServer()
+	opts := []grpc.ServerOption{
+		grpc.MaxRecvMsgSize(1024 * 1024 * 1024),
+		grpc.MaxSendMsgSize(1024 * 1024 * 1024),
+		grpc.KeepaliveParams(keepalive.ServerParameters{
+			Time: 10,
+			Timeout: 3,
+		}),
+		grpc.InitialWindowSize(1024 * 1024 * 1024),
+		grpc.InitialConnWindowSize(1024 * 1024 * 1024),
+		grpc.WriteBufferSize(32 * 1024 * 1024),
+		grpc.ReadBufferSize(32 * 1024 * 1024),
+		grpc.MaxConcurrentStreams(512),
+	}
+	if useStreamWorker == 1 {
+		opts = append(opts, grpc.NumStreamWorkers(uint32(runtime.NumCPU())))
+	}
+	server := grpc.NewServer(opts...)
 	fmt.Println("services start success")
 	proto.RegisterMessageSenderServer(server, &MessageSender{})
 	server.Serve(listen)
@@ -59,6 +91,7 @@ func (sender *MessageSender) StreamTest(stream proto.MessageSender_StreamTestSer
 			break
 		}
 		stream.Send(&proto.MessageResponse{ResponseSomething: data, IsEnd: false})
+		println(i)
 	}
 	stream.Recv()
 	return nil
