@@ -1,36 +1,221 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="13db2377-74e2-4c4e-89cb-4e22309ffb47" name="Default Changelist" comment="" />
+    <list default="true" id="13db2377-74e2-4c4e-89cb-4e22309ffb47" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/grpc/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/grpc/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/grpc/proto/message.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/grpc/proto/message.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/grpc/proto/message_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/grpc/server/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/grpc/tracingServer/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/proto/kitex_gen/message_proto/message.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/proto/kitex_gen/message_proto/messagesender/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/proto/kitex_gen/message_proto/messagesender/invoker.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/proto/kitex_gen/message_proto/messagesender/messagesender.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/proto/kitex_gen/message_proto/messagesender/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/proto/message.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/server/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kitex/tracingServer/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/message.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/message.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/proto/message_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/streamClient/streamClient.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/streamServer/streamServer.go" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.16.2/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
   <component name="ProjectId" id="26mOzawYUJX6eqdTekqgm5y3GKH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/kitex" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/grpc" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/kitex" />
+      <recent name="$PROJECT_DIR$/src/kitex/proto" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build rpc_test/src/kitex/tracingServer">
+    <configuration name="go build rpc_test/src/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rpc-benchmark" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/client/client.go" />
+      <package value="rpc_test/src/client" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build rpc_test/src/grpc/tracingServer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rpc-benchmark" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/grpc/tracingServer/server.go" />
+      <package value="rpc_test/src/grpc/tracingServer" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build rpc_test/src/kitex/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rpc-benchmark" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/kitex/server/server.go" />
+      <package value="rpc_test/src/kitex/server" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build rpc_test/src/kitex/tracingServer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rpc-benchmark" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/kitex/tracingServer/server.go" />
+      <package value="rpc_test/src/kitex/tracingServer" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build rpc_test/src/tracingServer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rpc-benchmark" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/tracingServer/server.go" />
+      <package value="rpc_test/src/tracingServer" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build rpc_test/src/kitex/tracingServer" />
+        <item itemvalue="Go Build.go build rpc_test/src/kitex/server" />
+        <item itemvalue="Go Build.go build rpc_test/src/grpc/tracingServer" />
+        <item itemvalue="Go Build.go build rpc_test/src/tracingServer" />
+        <item itemvalue="Go Build.go build rpc_test/src/client" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn" />
+      </map>
+    </environment>
   </component>
   <component name="WindowStateProjectService">
     <state x="683" y="458" key="#GOROOT" timestamp="1648025567039">
       <screen x="0" y="23" width="1792" height="996" />
     </state>
     <state x="683" y="458" key="#GOROOT/0.23.1792.996@0.23.1792.996" timestamp="1648025567039" />
+    <state x="696" y="361" key="#Go_Modules" timestamp="1648026170522">
+      <screen x="0" y="23" width="1792" height="996" />
+    </state>
+    <state x="696" y="361" key="#Go_Modules/0.23.1792.996@0.23.1792.996" timestamp="1648026170522" />
+    <state x="617" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1648435243123">
+      <screen x="0" y="23" width="1792" height="998" />
+    </state>
+    <state x="617" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.998@0.23.1792.998" timestamp="1648435243123" />
+    <state width="1750" height="270" key="GridCell.Tab.0.bottom" timestamp="1648275881826">
+      <screen x="0" y="23" width="1792" height="996" />
+    </state>
+    <state width="1750" height="270" key="GridCell.Tab.0.bottom/0.23.1792.996@0.23.1792.996" timestamp="1648275881826" />
+    <state width="1750" height="270" key="GridCell.Tab.0.center" timestamp="1648275881825">
+      <screen x="0" y="23" width="1792" height="996" />
+    </state>
+    <state width="1750" height="270" key="GridCell.Tab.0.center/0.23.1792.996@0.23.1792.996" timestamp="1648275881825" />
+    <state width="1750" height="270" key="GridCell.Tab.0.left" timestamp="1648275881825">
+      <screen x="0" y="23" width="1792" height="996" />
+    </state>
+    <state width="1750" height="270" key="GridCell.Tab.0.left/0.23.1792.996@0.23.1792.996" timestamp="1648275881825" />
+    <state width="1750" height="270" key="GridCell.Tab.0.right" timestamp="1648275881826">
+      <screen x="0" y="23" width="1792" height="996" />
+    </state>
+    <state width="1750" height="270" key="GridCell.Tab.0.right/0.23.1792.996@0.23.1792.996" timestamp="1648275881826" />
+    <state x="397" y="160" key="SettingsEditor" timestamp="1648183625759">
+      <screen x="0" y="23" width="1792" height="996" />
+    </state>
+    <state x="397" y="160" key="SettingsEditor/0.23.1792.996@0.23.1792.996" timestamp="1648183625759" />
+    <state x="561" y="243" width="670" height="676" key="search.everywhere.popup" timestamp="1648194069554">
+      <screen x="0" y="23" width="1792" height="996" />
+    </state>
+    <state x="561" y="243" width="670" height="676" key="search.everywhere.popup/0.23.1792.996@0.23.1792.996" timestamp="1648194069554" />
   </component>
 </project>

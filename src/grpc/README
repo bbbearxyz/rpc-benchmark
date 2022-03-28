@@ -1,0 +1,3 @@
+compile proto :
+protoc --go_out=. message.proto
+protoc --go-grpc_out=. message.proto
