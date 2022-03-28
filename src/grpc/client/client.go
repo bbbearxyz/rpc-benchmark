@@ -39,26 +39,30 @@ func Task(taskNumber int) {
 		go func(taskId int) {
 			request := &data[taskId]
 			request.Time = latency
+			conn, _ := grpc.Dial(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 			for true {
-				conn, _ := grpc.Dial(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
 				c := proto.NewMessageSenderClient(conn)
 				ctx, _ := context.WithTimeout(context.Background(), time.Duration(testTime + 10) * time.Second)
 				c.Send(ctx, request)
 				success = atomic.AddInt64(&success, 1)
-				conn.Close()
 			}
+			conn.Close()
 		}(i)
 	}
 }
 func StreamTask() {
 	request := &data[0]
-	conn, _ := grpc.Dial(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	// 最大recv msg size设为100Mb
+	conn, _ := grpc.Dial(addr, grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(100 * 1024 * 1024)))
 	ctx, _ := context.WithTimeout(context.Background(), time.Duration(testTime + 10) * time.Second)
 	client := proto.NewMessageSenderClient(conn)
 	stream, _ := client.StreamTest(ctx)
 	stream.Send(request)
 	for true {
-		res, _ := stream.Recv()
+		res, err := stream.Recv()
+		if err != nil {
+			println(err.Error())
+		}
 		if res.IsEnd {
 			break
 		}
@@ -138,8 +142,5 @@ func main() {
 		case <- ch:
 		}
 		println("throughput is ", success * payload / (testTime * 1024), " KB/s")
-
 	}
-
-
 }
